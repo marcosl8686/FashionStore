@@ -55,7 +55,21 @@ module.exports = function(sequelize, DataTypes) {
     },
     zip: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        isNumeric: true,
+      }
+    },
+    country: {
+    	type: DataTypes.STRING,
+    	allowNull: false,
+    	validate: {
+        	len: [1, 140] // validation needed?
+    	}
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {
         isNumeric: true,
       }
