@@ -22,23 +22,19 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Items</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#" class="home">Home</a></li>
+                <li><a href="#about" class="items">Items</a></li>
+                <li><a href="#contact" class="add-Items">Add new Item</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Clients<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Active Clients</a></li>
-                        <li><a href="#">Pending Clients</a></li>
+                        <li><a href="#" class="active-clients">Active Clients</a></li>
+                        <li><a href="#" class="pending-clients">Pending Clients</a></li>
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li><a href="../navbar-static-top/">Static top</a></li>
-                <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-            </ul>
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>
@@ -47,51 +43,152 @@
 <!--list of pending employees-->
 <div class="container" id="home-banner">
 
-    <div class="jumbotron" id="admin-home">
-        <h1>Pending Employees</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+    <div class="jumbotron main" id="admin-home">
+        <h1>Admin Home</h1>
+        <p>As admin you have access to the following:</p>
+        <ul class="options">
+            <li>Active Clients</li>
+            <li>Pending Clients</li>
+            <li>Clothing Items</li>
+            <li>Add new Clothing Item</li>
+        </ul>
+
     </div>
-    <div class="jumbotron" id="admin-pending-client">
-        <h1>Pending Employees</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+    <div class="jumbotron adminPending hide" id="admin-pending-client">
+        <div class="panel panel-warning">
+            <!-- Default panel contents -->
+            <div class="panel-heading">PENDING CLIENTS</div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <th>id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Delete</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <!--{{#each burgers}}-->
+                <!--{{#unless devoured}}-->
+                <tr>
+                    <form action="burger/eat/{{id}}" method="POST">
+                        <th scope="row" class="green">{{this.id}}</th>
+                        <th class="green">{{this.First_Name}} {{this.Last_Name}}</th>
+                        <th class="green">{{this.company}}</th>
+                        <th class="green">{{this.address}}</th>
+                        <th>
+                            <button id="{{this.id}}" type="submit" class="btn btn-primary">ACTIVATE</button>
+                        </th>
+                    </form>
+                </tr>
+                <!--{{/unless}}-->
+                <!--{{/each}}-->
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
-    <div class="jumbotron" id="admin-active-client">
-        <h1>Pending Employees</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+    <div class="jumbotron adminActive hide" id="admin-active-client">
+        <div class="panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">ACTIVE CLIENTS</div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <th>id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Delete</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <!--{{#each burgers}}-->
+                <!--{{#unless devoured}}-->
+                <tr>
+                    <form action="burger/eat/{{id}}" method="POST">
+                        <th scope="row" class="green">{{this.id}}</th>
+                        <th class="green">{{this.First_Name}} {{this.Last_Name}}</th>
+                        <th class="green">{{this.company}}</th>
+                        <th class="green">{{this.address}}</th>
+                        <th>
+                            <button id="{{this.id}}" type="submit" class="btn btn-danger">DELETE</button>
+                        </th>
+                    </form>
+                </tr>
+                <!--{{/unless}}-->
+                <!--{{/each}}-->
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="jumbotron" id="admin-items">
-        <h1>Pending Employees</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+    <div class="jumbotron allItems hide" id="admin-items">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Inventory</div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <th>id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Delete</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <!--{{#each burgers}}-->
+                <!--{{#unless devoured}}-->
+                <tr>
+                    <form action="burger/eat/{{id}}" method="POST">
+                        <th scope="row" class="green">{{this.id}}</th>
+                        <th class="green">{{this.First_Name}} {{this.Last_Name}}</th>
+                        <th class="green">{{this.company}}</th>
+                        <th class="green">{{this.address}}</th>
+                        <th>
+                            <button id="{{this.id}}" type="submit" class="btn btn-danger">DELETE</button>
+                        </th>
+                    </form>
+                </tr>
+                <!--{{/unless}}-->
+                <!--{{/each}}-->
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="jumbotron" id="admin-add-item">
-        <h1>Pending Employees</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+    <div class="jumbotron addItem hide" id="admin-add-item">
+        <h1>Add A New Item</h1>
+        <form>
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="Name" class="form-control" id="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="SKU">SKU</label>
+                <input type="SKU" class="form-control" id="SKU" placeholder="SKU">
+            </div>
+            <div class="form-group">
+                <label for="colors">Colors</label>
+                <input type="colors" class="form-control" id="colors"  placeholder="Enter colors">
+                <small id="colorsHelp" class="form-text text-muted">Seperate colors with a comma </small>
+            </div>
+            <div class="form-group">
+                <label for="itemDescription">Description</label>
+                <textarea class="form-control" id="itemDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">Image input</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-
-
 
 </div> <!-- /container -->
 

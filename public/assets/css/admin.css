@@ -2,8 +2,15 @@
     padding-top: 10%;
 }
 
-.jumbotron{
-    background-color: lightblue;
+.panel-heading{
+    font-size: medium;
 }
 
+.jumbotron{
+    background-color: lightblue;
+    /*border: solid 5px yellow;*/
+}
 
+.options{
+    font-size: medium;
+}
