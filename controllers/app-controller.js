@@ -8,6 +8,12 @@ router.get("/", function(req, res){
 	});
 });
 
+router.get("/signup", function(req, res){
+	res.render("registration", {
+		layout: "main-registration"
+	});
+})
+
 module.exports = router;
 
 
