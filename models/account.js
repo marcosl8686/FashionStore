@@ -81,6 +81,10 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
+    password: {
+    	type: DataTypes.STRING,
+    	allowNull: false
+    },
     approvedBuyer: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
