@@ -1,0 +1,16 @@
+#home-banner{
+    padding-top: 10%;
+}
+
+.panel-heading{
+    font-size: medium;
+}
+
+.jumbotron{
+    background-color: lightblue;
+    /*border: solid 5px yellow;*/
+}
+
+.options{
+    font-size: medium;
+}
