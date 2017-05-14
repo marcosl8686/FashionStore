@@ -1,8 +1,6 @@
 * {
 	margin:0;
-
 	font-family: 'Lora', serif;
-
 }
 html, body {
 	height: 100%;
@@ -80,7 +78,6 @@ nav a {
                  0px 34px 30px rgba(0,0,0,0.1);
 
 }
-
 .title {
 	text-align: center;
 }
@@ -97,4 +94,3 @@ nav a {
 	height: 320px;
 	overflow: hidden;
 }
-
