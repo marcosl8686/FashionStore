@@ -61,7 +61,6 @@ router.post('/login', passport.authenticate("local"), function(req, res) {
 
 // register a user
 router.post('/signup', function(req,res) {
-  console.log("Showing up?")
 	db.Account.findAll({
     where: {email: req.body.email}
   }).then(function(users) {
