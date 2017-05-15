@@ -8,7 +8,7 @@ $( document ).ready(function() {
     var usernameInput = $("input#name-input");
     var numInput = $("input#num-input");
     var priceInput = $("input#price-input");
-    var descriptionInput = $("input#description-input");
+    var descriptionInput = $("textarea#description-input");
 
     usernameInput.bind('input propertychange', function() {
         if (usernameInput.val().trim().length < 6 ) {
@@ -53,6 +53,7 @@ $( document ).ready(function() {
         if (descriptionInput.val().trim().length > 140) {
             $("#description-form").removeClass("has-success");
             $("#description-form").addClass("has-error");
+            $("#description-feedback").text('Description should not be no longer than 140 charaters.');
 
         } else {
             $("#description-form").removeClass("has-error");
@@ -62,43 +63,43 @@ $( document ).ready(function() {
     });
 
 
-
-    $(".home").click(function(){
-       $(".allItems").addClass('hide');
-        $(".addItem").addClass('hide');
-        $(".adminActive").addClass('hide');
-        $(".adminPending").addClass('hide');
-        $(".main").removeClass('hide');
-
-    });
-    $(".items").click(function(){
-        $(".main").addClass('hide');
-        $(".addItem").addClass('hide');
-        $(".adminActive").addClass('hide');
-        $(".adminPending").addClass('hide');
-        $(".allItems").removeClass('hide');
-    });
-    $(".add-Items").click(function(){
-        $(".main").addClass('hide');
-        $(".allItems").addClass('hide');
-        $(".adminActive").addClass('hide');
-        $(".adminPending").addClass('hide');
-        $(".addItem").removeClass('hide');
-    });
-    $(".active-clients").click(function(){
-        $(".main").addClass('hide');
-        $(".allItems").addClass('hide');
-        $(".addItem").addClass('hide');
-        $(".adminPending").addClass('hide');
-        $(".adminActive").removeClass('hide');
-    });
-    $(".pending-clients").click(function(){
-        $(".main").addClass('hide');
-        $(".allItems").addClass('hide');
-        $(".addItem").addClass('hide');
-        $(".adminActive").addClass('hide');
-        $(".adminPending").removeClass('hide');
-    });
+    //
+    // $(".home").click(function(){
+    //    $(".allItems").addClass('hide');
+    //     $(".addItem").addClass('hide');
+    //     $(".adminActive").addClass('hide');
+    //     $(".adminPending").addClass('hide');
+    //     $(".main").removeClass('hide');
+    //
+    // });
+    // $(".items").click(function(){
+    //     $(".main").addClass('hide');
+    //     $(".addItem").addClass('hide');
+    //     $(".adminActive").addClass('hide');
+    //     $(".adminPending").addClass('hide');
+    //     $(".allItems").removeClass('hide');
+    // });
+    // $(".add-Items").click(function(){
+    //     $(".main").addClass('hide');
+    //     $(".allItems").addClass('hide');
+    //     $(".adminActive").addClass('hide');
+    //     $(".adminPending").addClass('hide');
+    //     $(".addItem").removeClass('hide');
+    // });
+    // $(".active-clients").click(function(){
+    //     $(".main").addClass('hide');
+    //     $(".allItems").addClass('hide');
+    //     $(".addItem").addClass('hide');
+    //     $(".adminPending").addClass('hide');
+    //     $(".adminActive").removeClass('hide');
+    // });
+    // $(".pending-clients").click(function(){
+    //     $(".main").addClass('hide');
+    //     $(".allItems").addClass('hide');
+    //     $(".addItem").addClass('hide');
+    //     $(".adminActive").addClass('hide');
+    //     $(".adminPending").removeClass('hide');
+    // });
 });
 
 
@@ -113,7 +114,8 @@ function previewFile(){
 
     if (file) {
         reader.readAsDataURL(file); //reads the data as a URL
-    } else {
+    }
+    else {
         preview.src = "";
     }
 }
