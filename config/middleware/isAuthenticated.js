@@ -2,9 +2,6 @@
 module.exports = function(req, res, next) {
   // If the user is logged in, continue with the request to the restricted route
   if (req.user) {
-  	if (req.user.admin) {
-  		return res.redirect("/admin/setup");
-  	}
   	if (req.user.approvedBuyer){
   		return next();
   	}
