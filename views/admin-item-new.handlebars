@@ -1,0 +1,77 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jolie</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="setup" class="home">Home</a></li>
+                <li><a href="items" class="items">Items</a></li>
+                <li><a href="newItem" class="add-Items">Add new Item</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Clients<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="activeClients" class="active-clients">Active Clients</a></li>
+                        <li><a href="pendingClients" class="pending-clients">Pending Clients</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<!--End of Navbar-->
+
+<!--list of pending employees-->
+<div class="container" id="home-banner">
+
+
+    <div class="jumbotron addItem " id="admin-add-item">
+        <h1>Add A New Item</h1>
+        <form>
+            <div class="form-group" id="name-form">
+                <label for="name-input">Name</label>
+                <input type="name-input" class="form-control" id="name-input" placeholder="Name">
+                <small id="username-feedback"></small>
+            </div>
+            <div class="form-group" id="num-form">
+                <label for="num-input">Item Number</label>
+                <input type="num-input" class="form-control" id="num-input" placeholder="SKU">
+                <small id="num-feedback"></small>
+            </div>
+            <div class="form-group">
+                <label for="colors">Colors</label>
+                <input type="colors" class="form-control" id="colors"  placeholder="Enter colors">
+                <small id="colorsHelp" class="form-text text-muted">Seperate colors with a comma </small>
+            </div>
+            <div class="form-group" id="price-form">
+                <label for="price-input">Price</label>
+                <input type="price-input" class="form-control" id="price-input"  placeholder="Enter colors">
+                <small id="price-feedback" class="form-text text-muted">Enter price with decimal ie 187.34</small>
+            </div>
+            <div class="form-group" id="description-form">
+                <label for="description-input">Description</label>
+                <textarea class="form-control" id="description-input" rows="3"></textarea>
+                <small id="description-feedback"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">Image input</label>
+                <input name='test' type="file" class="myfile" onchange="previewFile()"><br>
+                <img src="" height="200" alt="Image preview...">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div> <!-- /container -->
