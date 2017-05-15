@@ -28,11 +28,11 @@ passport.use(new LocalStrategy(
           			message: "Incorrect password."
         		});
       		}
-          else if (!dbAcct.approvedBuyer) {
-            return done(null, false, {
-                message: "Pending."
-            });
-          }
+          // else if (!dbAcct.approvedBuyer) {
+          //   return done(null, false, {
+          //       message: "Pending."
+          //   });
+          // }
 //       // If none of the above, return the user
       		return done(null, dbAcct);
     	});

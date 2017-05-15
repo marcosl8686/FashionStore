@@ -31,7 +31,6 @@ $(document).ready(function() {
       if (data.message) {
         alert(data.message);
       }
-      console.log(data);
       window.location.replace(data);
       // If there's an error, log the error
     }).catch(function(err) {
