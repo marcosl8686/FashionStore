@@ -11,7 +11,7 @@ passport.use(new LocalStrategy(
   	},
 	function(email, password, done) {
     	// When a user tries to sign in this code runs
-    	db.Acct.findOne({
+    	db.Account.findOne({
       		where: {
         		email: email
       		}
@@ -28,6 +28,11 @@ passport.use(new LocalStrategy(
           			message: "Incorrect password."
         		});
       		}
+          else if (!dbAcct.approvedBuyer) {
+            return done(null, false, {
+                message: "Pending."
+            });
+          }
 //       // If none of the above, return the user
       		return done(null, dbAcct);
     	});
