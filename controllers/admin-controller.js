@@ -1,8 +1,55 @@
-var db  = require('../models');
 var express = require('express');
-var router  = express.Router();
+var db  = require('../models');
+var multer = require('multer');
+var uniqid = require('uniqid');
+var mkdirp = require('mkdirp');
+
+var path = require('path');
 var adminAuthenticated = require("../config/middleware/adminAuthenticated");
 
+
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+    	console.log(req.body);
+        var dir = 'temp/';
+        mkdirp(dir, function(err){
+            cb(err, dir)
+        })
+    },
+    filename: function (req, file, cb) {
+        cb(null, uniqid() + path.extname(file.originalname));
+    }
+});
+
+var upload = multer({ storage: storage});
+var router  = express.Router();
+
+router.post('/post',adminAuthenticated, upload.single('test'), function (req, res) {
+
+    console.log('hit');
+    //console.log(req.file);
+    console.log('path', req.file.path);
+    console.log('name', req.body);
+
+
+
+
+	db.Products.create({
+		itemNum: req.body.num,
+		itemName: req.body.name,
+		color: req.body.color,
+		img: req.file.path,
+		category: req.body.description,
+		price: req.body.price
+	}).then(function() {
+		//res.send({redirect: '/a'});
+	}).catch(function(err) {
+		res.json(err);
+	});
+
+
+});
 
 router.get("/setup",adminAuthenticated, function(req, res){
     res.render("admin", {
@@ -36,6 +83,8 @@ router.get('/pendingClients',adminAuthenticated, function(req,res){
 		layout: "main-admin"
 	})
 });
+
+
 
 ///*************************////
 

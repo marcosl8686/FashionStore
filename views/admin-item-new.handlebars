@@ -37,30 +37,30 @@
 
     <div class="jumbotron addItem " id="admin-add-item">
         <h1>Add A New Item</h1>
-        <form>
+        <form action="/admin/post" method="post" enctype="multipart/form-data">
             <div class="form-group" id="name-form">
                 <label for="name-input">Name</label>
-                <input type="name-input" class="form-control" id="name-input" placeholder="Name">
+                <input type="name-input" class="form-control" id="name-input" placeholder="Name" name="name">
                 <small id="username-feedback"></small>
             </div>
             <div class="form-group" id="num-form">
                 <label for="num-input">Item Number</label>
-                <input type="num-input" class="form-control" id="num-input" placeholder="SKU">
+                <input type="num-input" class="form-control" id="num-input" placeholder="SKU" name="num">
                 <small id="num-feedback"></small>
             </div>
             <div class="form-group">
                 <label for="colors">Colors</label>
-                <input type="colors" class="form-control" id="colors"  placeholder="Enter colors">
+                <input type="colors" class="form-control" id="colors"  placeholder="Enter colors" name="color">
                 <small id="colorsHelp" class="form-text text-muted">Seperate colors with a comma </small>
             </div>
             <div class="form-group" id="price-form">
                 <label for="price-input">Price</label>
-                <input type="price-input" class="form-control" id="price-input"  placeholder="Enter colors">
+                <input type="price-input" class="form-control" id="price-input"  placeholder="Enter colors" name="price">
                 <small id="price-feedback" class="form-text text-muted">Enter price with decimal ie 187.34</small>
             </div>
             <div class="form-group" id="description-form">
                 <label for="description-input">Description</label>
-                <textarea class="form-control" id="description-input" rows="3"></textarea>
+                <textarea class="form-control" id="description-input" rows="3" name="description"></textarea>
                 <small id="description-feedback"></small>
             </div>
             <div class="form-group">
