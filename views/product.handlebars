@@ -36,11 +36,13 @@
       </a>
     </div>
   </div>
-<div class="col-xs-6 col-md-3">
+
 		{{#each products}}
+            <div class="col-xs-6 col-md-3">
 			<a href="#" class="thumbnail">
 				<img src="{{this.img}}" alt="...">
 				<h5><span>{{this.itemNum}}</span> {{this.itemName}}</h5>
             </a>
+            </div>
         {{/each}}    
-</div>
+

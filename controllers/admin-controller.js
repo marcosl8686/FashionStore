@@ -12,7 +12,7 @@ var adminAuthenticated = require("../config/middleware/adminAuthenticated");
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
     	console.log(req.body);
-        var dir = 'temp/';
+        var dir = 'public/assets/temp';
         mkdirp(dir, function(err){
             cb(err, dir)
         })
@@ -31,7 +31,8 @@ router.post('/post',adminAuthenticated, upload.single('test'), function (req, re
     //console.log(req.file);
     console.log('path', req.file.path);
     console.log('name', req.body);
-
+	var path = req.file.path;
+    var modPath = path.replace("public",'');
 
 
 
@@ -39,7 +40,7 @@ router.post('/post',adminAuthenticated, upload.single('test'), function (req, re
 		itemNum: req.body.num,
 		itemName: req.body.name,
 		color: req.body.color,
-		img: req.file.path,
+		img: modPath,
 		category: req.body.description,
 		price: req.body.price
 	}).then(function() {
