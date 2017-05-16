@@ -39,10 +39,22 @@
 
 		{{#each products}}
             <div class="col-xs-6 col-md-3">
-			<a href="#" class="thumbnail">
+				<a href="#" class="thumbnail" data-toggle="modal" data-target="#{{this.id}}">
 				<img src="{{this.img}}" alt="...">
 				<h5><span>{{this.itemNum}}</span> {{this.itemName}}</h5>
-            </a>
+            	</a>
             </div>
+
+            <div class="modal fade" id="{{this.id}}" role="dialog">
+    			<div class="modal-dialog">
+    
+      <!-- Modal content-->
+		    		<div class="container" >
+		      	
+		      	<h1>{{this.itemName}}</h1>
+		    		</div>
+		      
+		    	</div>
+			</div>
         {{/each}}    
 
