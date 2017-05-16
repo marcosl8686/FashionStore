@@ -7,28 +7,28 @@ var uniqid = require('uniqid');
 var mkdirp = require('mkdirp');
 var path = require('path');
 
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        var dir = 'temp/';
-        mkdirp(dir, function(err){
-            cb(err, dir)
-        })
-    },
-    filename: function (req, file, cb) {
-        cb(null, uniqid() + path.extname(file.originalname));
-    }
-});
-
-var upload = multer({ storage: storage});
-
-router.post('/post', upload.single('test') ,function (req, res) {
-    console.log('hit');
-    console.log(req.file);
-    console.log('path', req.file.path);
-
-    res.json({file: req.file, body: req.body});
-    //res.redirect('/');
-});
+// var storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         var dir = 'temp/';
+//         mkdirp(dir, function(err){
+//             cb(err, dir)
+//         })
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, uniqid() + path.extname(file.originalname));
+//     }
+// });
+//
+// var upload = multer({ storage: storage});
+//
+// router.post('/post', upload.single('test') ,function (req, res) {
+//     console.log('hit');
+//     console.log(req.file);
+//     console.log('path', req.file.path);
+//
+//     res.json({file: req.file, body: req.body});
+//     //res.redirect('/');
+// });
 
 router.get('/login', function(req, res){
     res.render('login', {

@@ -9,7 +9,7 @@ var PORT 				= process.env.PORT || 8090;
 var db 					= require("./models");
 var app 				= express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
