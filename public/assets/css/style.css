@@ -102,5 +102,8 @@ nav a {
 	min-height: 86px;
 }
 .mainContent {
-	background-image: url(../images/greyBG.jpeg)
+	background-color: #e0e2e5;
+}
+.productContent {
+	background-color: white;
 }
