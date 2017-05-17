@@ -1,4 +1,4 @@
-<section class="container">
+	<section class="container">
 		<div class="contaier-fuild">
 			<div class="row">
 				<div id="slide" class="carousel slide slideShow" data-ride="carousel">
@@ -36,25 +36,54 @@
       </a>
     </div>
   </div>
-
+  	<section class="container">
+		<div class="row">
 		{{#each products}}
-            <div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target="#{{this.id}}">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <div class="thumbnail">
+				<a href="#" data-toggle="modal" data-target="#{{this.id}}">
 				<img src="{{this.img}}" alt="...">
-				<h5><span>{{this.itemNum}}</span> {{this.itemName}}</h5>
-            	</a>
+				</a>
+				<div class="thumbnail-product">
+				<h5 href="#">{{this.itemNum}}</h5>
+				<a href="#">{{this.itemName}}</a>
+            	</div>
             </div>
+            </div>
+        {{/each}} 
+        </div>
+    </section> 
 
-            <div class="modal fade" id="{{this.id}}" role="dialog">
-    			<div class="modal-dialog">
+      
+
+
+
     
       <!-- Modal content-->
-		    		<div class="container" >
-		      	
-		      	<h1>{{this.itemName}}</h1>
-		    		</div>
-		      
-		    	</div>
-			</div>
-        {{/each}}    
+
+	{{#each products}}
+	<div class="modal fade" id="{{this.id}}" role="dialog">
+    	<div class="modal-dialog">
+    
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<h4 class="modal-title">{{this.itemName}}</h4>
+        		</div>
+        		<div class="container-fluid">
+        			<div class="row">
+        				<div class="col-xs-12 col-md-6">
+        					<img src="{{this.img}}" alt="..." class="modalImg">
+        				</div>
+
+        			</div>
+        		</div>
+     		</div>
+      
+   		</div>
+	</div>
+     {{/each}}    
+
+
+
 

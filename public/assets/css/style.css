@@ -6,7 +6,7 @@ html, body {
 	height: 100%;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, p {
 	margin-bottom: 20px;
 }
 
@@ -93,4 +93,14 @@ nav a {
 	width: 100%;
 	height: 320px;
 	overflow: hidden;
+}
+.modalImg{ 
+	width: 300px;
+	margin-bottom:10px;
+ }
+.thumbnail-product {
+	min-height: 86px;
+}
+.mainContent {
+	background-image: url(../images/greyBG.jpeg)
 }
