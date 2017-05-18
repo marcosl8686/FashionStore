@@ -33,7 +33,10 @@
 
 <!--list of pending employees-->
 <div class="container" id="home-banner">
-
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <div class="jumbotron adminActive" id="admin-active-client">
@@ -51,20 +54,20 @@
                 <th></th>
                 </thead>
                 <tbody>
-                <!--{{#each burgers}}-->
-                <!--{{#unless devoured}}-->
+                <!--{{#each account}}-->
+                <!--{{#if approvedBuyer}}-->
                 <tr>
                     <form action="burger/eat/{{id}}" method="POST">
                         <th scope="row" class="green">{{this.id}}</th>
-                        <th class="green">{{this.First_Name}} {{this.Last_Name}}</th>
-                        <th class="green">{{this.company}}</th>
+                        <th class="green">{{this.firstName}} {{this.lastName}}</th>
+                        <th class="green">{{this.companyName}}</th>
                         <th class="green">{{this.address}}</th>
                         <th>
                             <button id="{{this.id}}" type="submit" class="btn btn-danger">DELETE</button>
                         </th>
                     </form>
                 </tr>
-                <!--{{/unless}}-->
+                <!--{{/if}}-->
                 <!--{{/each}}-->
                 </tbody>
             </table>

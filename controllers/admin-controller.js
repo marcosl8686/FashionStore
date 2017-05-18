@@ -58,13 +58,11 @@ router.get("/setup",adminAuthenticated, function(req, res){
 	});
 });
 
-///Testing Admin-page without Authentication////////
-/*******/
 
 router.get("/items", adminAuthenticated, function(req, res){
-	res.render("admin-items", {
-		layout: "main-admin"
-	});
+    db.Products.findAll({}).then(function(data){
+        	res.render("admin-items", {products:data});
+    });
 });
 
 router.get("/newItem", adminAuthenticated, function(req,res){
@@ -74,15 +72,15 @@ router.get("/newItem", adminAuthenticated, function(req,res){
 });
 
 router.get('/activeClients',adminAuthenticated, function(req,res){
-	res.render("admin-active", {
-		layout: "main-admin"
-	})
+	db.Account.findAll({}).then(function(data){
+        res.render("admin-active", {account:data});
+	});
 });
 
 router.get('/pendingClients',adminAuthenticated, function(req,res){
-	res.render("admin-pending", {
-		layout: "main-admin"
-	})
+    db.Account.findAll({}).then(function(data){
+        res.render("admin-pending", {account:data});
+    });
 });
 
 
