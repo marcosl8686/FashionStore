@@ -8,7 +8,7 @@ var passport 			= require("./config/passport");
 var PORT 				= process.env.PORT || 8090;
 var db 					= require("./models");
 var app 				= express();
-
+var authCheck = require('./config/middleware/attachAuthenticationStatus');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -22,6 +22,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(authCheck);
 
 require("./routes.js")(app);
 

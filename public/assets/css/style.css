@@ -107,3 +107,10 @@ nav a {
 .productContent {
 	background-color: white;
 }
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+.productHeader {
+	text-align: center;
+}

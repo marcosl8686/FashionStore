@@ -8,6 +8,7 @@ router.get('/members', isAuthenticated, function(req,res) {
 	db.Products.findAll({}).then(function(data) {
 		res.render("product", {products: data, layout: "main-product"});
 	})
+	
 });
 
 
