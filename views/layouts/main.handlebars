@@ -15,13 +15,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
 </head>
-
-	<body>
-    
-
-
-
-
 	<body><!-- id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"-->
 
 	   {{{ body }}}
@@ -32,5 +25,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="/assets/js/login.js"></script>
+        <script type="text/javascript">
+        var targetOffset = $("#hero-img").offset().top;
+
+        var $w = $(window).scroll(function(){
+            if ( $w.scrollTop() > targetOffset ) {   
+                $('#hero-img').css({"position":"fixed"});
+                $('#hero-img').css({"top":"0px"});
+                $('#hero-img').css({"width":"100%"});
+                $('#logo').css({"position":"relative"});
+                $('#logo').css({"top":"0"});
+
+                // $('#logo').css({""})
+            }else{
+                $('#hero-img').css({"position":"relative"});
+                $('#logo').css({"position":"absolute"});
+                $('#logo').css({"top":"156px"});
+
+            }
+        });
+        </script>
     </body>
 </html>
