@@ -18,8 +18,18 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    {{!-- <li class="links-right"><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> --}}
-                    <li class="links-right"><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                {{#if isAuthenticated}}
+                    <li><a href="/logout/sign-out" class="page-scroll" data-toggle="modal">Logout</a></li>
+                {{else}}
+                    <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                {{/if}}
+                {{#if adminAuthenticated}}
+                    <li><a href="/logout/sign-out" class="page-scroll" data-toggle="modal">Admin</a></li>
+                {{/if}}
+
+                  
                 </ul>
             </div>
 

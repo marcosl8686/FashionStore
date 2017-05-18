@@ -32,7 +32,11 @@ module.exports = function(sequelize, DataTypes){
 			validate: {
 				isFloat: true
 			}
-		}
+		},
+		selected: {
+      	type: DataTypes.BOOLEAN,
+      	defaultValue: false
+    	}
 	});
 	return Product;
 };
