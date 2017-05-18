@@ -6,8 +6,7 @@ font-family: 'Playfair Display', serif; */
 	margin:0;
 	box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
-	position: relative;
-	z-index: 5;
+	
 }
 html, body {
 	height: 100%;
@@ -37,15 +36,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -----------------------hero sec-----------------------*/
 
-.sect, .logo {
-	height: 400px;
+.sect, #logo {
+	height: 100%;
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.logo {
+#logo {
 	position: absolute;
-	top: 140px;
+	top: 156px;
 	height: 100%;
 	width: 100%;
 
@@ -55,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 .sectOne {
 	position: relative;
 	height: 100%;
+	width: 100%;
 	z-index: 0;
 	/*top: 140px;*/
 	background-image: url("../images/img1.jpg");	
@@ -62,14 +62,20 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 .subSection1 {
+	position: relative;
+	z-index: 1;
 	height: 80%;
 	background-color:white;
 }
 .subSection2 {
+	position: relative;
+	z-index: 1;
 	height: 40%;
 	background-color:white;
 }
 .sectTwo {
+	position: relative;
+	z-index: 1;
 	height: 80%;
 	background-image: url("../images/img2.jpg");
 	/*background-attachment: fixed;*/
