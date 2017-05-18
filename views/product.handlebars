@@ -1,4 +1,5 @@
-<section class="container">
+	<div class="container productContent">
+	<section class="container-fluid">
 		<div class="contaier-fuild">
 			<div class="row">
 				<div id="slide" class="carousel slide slideShow" data-ride="carousel">
@@ -29,18 +30,61 @@
 		</div>
 	</section>
 
-	<div class="container-fluid">
+<div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/logout/sign-out">
         Logout
       </a>
     </div>
   </div>
-<div class="col-xs-6 col-md-3">
+  	<section class="container-fluid">
+		<div class="row">
 		{{#each products}}
-			<a href="#" class="thumbnail">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <div class="thumbnail">
+				<a href="#" data-toggle="modal" data-target="#{{this.id}}">
 				<img src="{{this.img}}" alt="...">
-				<h5><span>{{this.itemNum}}</span> {{this.itemName}}</h5>
-            </a>
-        {{/each}}    
+				</a>
+				<div class="thumbnail-product">
+				<h5 href="#">{{this.itemNum}}</h5>
+				<a href="#">{{this.itemName}}</a>
+            	</div>
+            </div>
+            </div>
+        {{/each}} 
+        </div>
+    </section> 
 </div>
+      
+
+
+
+    
+      <!-- Modal content-->
+
+	{{#each products}}
+	<div class="modal fade" id="{{this.id}}" role="dialog">
+    	<div class="modal-dialog">
+    
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<h4 class="modal-title">{{this.itemName}}</h4>
+        		</div>
+        		<div class="container-fluid">
+        			<div class="row">
+        				<div class="col-xs-12 col-md-6">
+        					<img src="{{this.img}}" alt="..." class="modalImg">
+        				</div>
+
+        			</div>
+        		</div>
+     		</div>
+      
+   		</div>
+	</div>
+     {{/each}}    
+
+
+
+

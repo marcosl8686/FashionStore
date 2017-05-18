@@ -13,7 +13,10 @@ html, body {
 	height: 100%;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
+
+
 	margin-bottom: 20px;
 	font-family: 'PT Sans', sans-serif;
 }
@@ -110,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 320px;
 	overflow: hidden;
 }
+
 .jolie-navbar {	
     border-radius: 0px;
     z-index: 10;
@@ -143,4 +147,19 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+
+
+.modalImg{ 
+	width: 300px;
+	margin-bottom:10px;
+ }
+.thumbnail-product {
+	min-height: 86px;
+}
+.mainContent {
+	background-color: #e0e2e5;
+}
+.productContent {
+	background-color: white;
+}
 
