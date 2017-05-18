@@ -111,13 +111,13 @@ h1, h2, h3, h4, h5, h6 {
 #about-wrapper {
 	width: 80%;
 	display: block;
-	margin: 150px auto 50px auto;
+	margin: 120px auto 80px auto;
 	padding: 40px 80px 80px 80px;
 	border: 3px solid black;
 }
 #about-heading {
 	text-align: center;
-	margin-top: -118px;
+	margin-top: -124px;
 	position: relative;
 	width: 70%;
 	left: 15%;
