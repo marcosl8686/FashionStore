@@ -8,13 +8,11 @@ $(document).ready(function() {
             $('#hero-img').css({ "width": "100%" });
             $('#logo').css({ "position": "relative" });
             $('#logo').css({ "top": "0" });
-
-            // $('#logo').css({""})
         } else {
             $('#hero-img').css({ "position": "relative" });
             $('#logo').css({ "position": "absolute" });
-            $('#logo').css({ "top": "156px" });
+            $('#logo').css({ "top": "100px" });
 
         }
     });
-})
+});

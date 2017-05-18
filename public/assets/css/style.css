@@ -6,8 +6,6 @@ font-family: 'Playfair Display', serif; */
 	margin:0;
 	box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
-	/*position: relative;
-	z-index: 5;*/
 }
 html, body {
 	height: 100%;
@@ -15,28 +13,11 @@ html, body {
 
 
 h1, h2, h3, h4, h5, h6 {
-
-
 	margin-bottom: 20px;
 	font-family: 'PT Sans', sans-serif;
 }
 
-/*nav {
-	position: fixed;
-	width: 100%;
-	height: 50px;
-	background-color: rgba(0,0,0,.2);
-	z-index: 99;
-}*/
-/*nav a {
-	text-decoration: none;
-	color:#fff;
-	margin-left: 30px;
-	line-height: 50px;
-}*/
-
 /* -----------------------hero sec-----------------------*/
-
 .sect, #logo {
 	height: 100%;
 	background-size: cover;
@@ -47,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	top: 156px;
+	top: 100px;
 
 	z-index: 1;
 	background-image: url("../images/jolie-logo-mai-white.png");
@@ -57,16 +38,28 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	z-index: 0;
 	height: 100%;
-	/*top: 140px;*/
-	background-image: url("../images/img1.jpg");	
-	/*background-attachment: fixed;*/
-
+	background-image: url("../images/hero-2.jpg");	
 }
-.subSection1 {
+
+/* -----------------------about-----------------------*/
+.about {
 	position: relative;
 	z-index: 1;
-	height: 80%;
+	width: 100%;
 	background-color:white;
+	padding-bottom: 100px;
+}
+.frame {
+	margin-top: -15vh;
+	background-color: white;
+    box-shadow: 0 0 30px rgba(32,14,17,.10);
+}
+.about-wrapper {
+	width: 80%;
+	display: block;
+	margin: 150px auto 50px auto;
+	padding: 40px 80px 80px 80px;
+	border: 3px solid black;
 }
 .subSection2 {
 	height: 40%;
@@ -76,42 +69,62 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	z-index: 1;
 	height: 80%;
-	background-image: url("../images/img2.jpg");
-	/*background-attachment: fixed;*/
+	background-image: url("../images/hero-2.jpg");
 }
 
 /* -----------------------banner sec-----------------------*/
-
 .banner {
-	/*height: 120px;*/
-	background-color: #ededed;
+	background-color: black;
 	text-align: center;
 	padding: 40px 0 30px 0;
 	z-index: 99;
 }
+
 .banner p {
-	color: black;
+	color: white;
 }
+
 .create-btn {
-	border: 2px solid #a80505;
+	border: 2px solid lightcoral;
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
-	color: #a80505;
+	color: lightcoral;
 	padding: 10px 15px;
 	margin-left: 30px;
 }
 
-.topLeft {
+/*.topLeft {
 	float: right;
 }
 .img-about {
 	width: 400px;
 	max-height:100%;
 }
-
-.title {
+*/
+#about-heading {
 	text-align: center;
+	margin-top: -118px;
+	position: relative;
+	width: 70%;
+	left: 15%;
+	background-color: white;
+	padding-bottom: 30px;
 }
+
+#about-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 100px;
+	text-transform: uppercase;
+}
+
+#about-subtitle {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+
+
 .aboutimg {
 	width: 100%;
 	height: 280px;
@@ -126,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 
+/* -----------------------nav-----------------------*/
 .jolie-navbar {	
     border-radius: 0px;
     z-index: 10;
@@ -150,9 +164,12 @@ h1, h2, h3, h4, h5, h6 {
 .links-center a {
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
+	color: black !important;
 }
 .links-right a {
 	font-family: 'PT Sans', sans-serif;
+	color: black !important;
+
 }
 
 .navbar .navbar-collapse {
