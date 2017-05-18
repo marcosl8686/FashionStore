@@ -33,37 +33,41 @@
 
 <!--list of pending employees-->
 <div class="container" id="home-banner">
-
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div class="jumbotron allItems" id="admin-items">
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading">Inventory</div>
             <!-- Table -->
+
             <table class="table">
                 <thead>
-                <th>id</th>
+                <th>Number</th>
                 <th>Name</th>
-                <th>Company</th>
-                <th>Address</th>
+                <th>Price</th>
+                <th>Category</th>
                 <th>Delete</th>
                 <th></th>
                 </thead>
                 <tbody>
-                <!--{{#each burgers}}-->
-                <!--{{#unless devoured}}-->
+                <!--{{#each products}}-->
+
                 <tr>
                     <form action="burger/eat/{{id}}" method="POST">
-                        <th scope="row" class="green">{{this.id}}</th>
-                        <th class="green">{{this.First_Name}} {{this.Last_Name}}</th>
-                        <th class="green">{{this.company}}</th>
-                        <th class="green">{{this.address}}</th>
+                        <th scope="row" class="green">{{this.itemNum}}</th>
+                        <th class="green"> {{this.itemName}}</th>
+                        <th class="green">{{this.price}}</th>
+                        <th class="green">{{this.category}}</th>
                         <th>
                             <button id="{{this.id}}" type="submit" class="btn btn-danger">DELETE</button>
                         </th>
                     </form>
                 </tr>
-                <!--{{/unless}}-->
+
                 <!--{{/each}}-->
                 </tbody>
             </table>
