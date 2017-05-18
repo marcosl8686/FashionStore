@@ -6,8 +6,8 @@ font-family: 'Playfair Display', serif; */
 	margin:0;
 	box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
-	position: relative;
-	z-index: 5;
+/*	position: relative;
+	z-index: 5;*/
 }
 html, body {
 	height: 100%;
@@ -170,4 +170,8 @@ h1, h2, h3, h4, h5, h6 {
 .productHeader {
 	text-align: center;
 }
-
+/*.modal {
+	position: relative;
+	z-index: 99
+}
+*/
