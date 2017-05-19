@@ -35,7 +35,7 @@ $(document).ready(function() {
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
-      alert("Account not activated or incorrect ID/PW")
+      alert("Invalid Email or Password")
     });
   }
 
