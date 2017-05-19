@@ -14,7 +14,6 @@ router.get('/members', isAuthenticated,function(req,res) {
 
 router.get('/rendermodal/:productnumber',isAuthenticated, function(req,res) {
 	db.Products.findAll({where: {itemNum: req.params.productnumber}}).then(function(data) {
-		console.log(data);
 		res.render("partials/product-modal", {itemList: data, layout: false});
 	})
 });

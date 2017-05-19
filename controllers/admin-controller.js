@@ -26,11 +26,6 @@ var upload = multer({ storage: storage});
 var router  = express.Router();
 
 router.post('/post',adminAuthenticated, upload.single('test'), function (req, res) {
-
-    console.log('hit');
-    //console.log(req.file);
-    console.log('path', req.file.path);
-    console.log('name', req.body);
 	var path = req.file.path;
     var modPath = path.replace("public",'');
 
