@@ -18,6 +18,12 @@ module.exports = function(sequelize, DataTypes){
 				len: [1, 140]
 			}
 		},
+		colorCode: {
+			type: DataTypes.STRING,
+			validate: {
+				len: [1, 140]
+			}
+		},
 		img: {
 			type: DataTypes.STRING,
 		},
