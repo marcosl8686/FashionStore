@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("something");
   // Getting references to our form and input
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
