@@ -87,7 +87,7 @@ router.post('/signup', function(req,res) {
         approvedBuyer: req.body.approvedBuyer,
         admin: req.body.admin
       }).then(function() {
-        res.send({redirect: '/'});
+        res.json('/pending');
       }).catch(function(err) {
         res.json(err);
       });
