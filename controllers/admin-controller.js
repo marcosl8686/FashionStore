@@ -40,6 +40,8 @@ router.post('/post',adminAuthenticated, upload.single('test'), function (req, re
 		itemNum: req.body.num,
 		itemName: req.body.name,
 		color: req.body.color,
+		colorCode: req.body.colorCode,
+		selected: req.body.colorBox,
 		img: modPath,
 		category: req.body.description,
 		price: req.body.price
