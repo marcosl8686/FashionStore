@@ -7,34 +7,13 @@ var uniqid = require('uniqid');
 var mkdirp = require('mkdirp');
 var path = require('path');
 
-// var storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//         var dir = 'temp/';
-//         mkdirp(dir, function(err){
-//             cb(err, dir)
-//         })
-//     },
-//     filename: function (req, file, cb) {
-//         cb(null, uniqid() + path.extname(file.originalname));
-//     }
-// });
-//
-// var upload = multer({ storage: storage});
-//
-// router.post('/post', upload.single('test') ,function (req, res) {
-//     console.log('hit');
-//     console.log(req.file);
-//     console.log('path', req.file.path);
-//
-//     res.json({file: req.file, body: req.body});
-//     //res.redirect('/');
-// });
 
-router.get('/login', function(req, res){
-    res.render('login', {
-        title: 'Express Login'
-    });
-});
+
+// router.get('/login', function(req, res){
+//     res.render('login', {
+//         title: 'Express Login'
+//     });
+// });
 
 //this is the users_controller.js file
 router.get('/main', function(req,res) {
@@ -51,10 +30,23 @@ router.get('/sign-out', function(req,res) {
 
 // login
 router.post('/login', passport.authenticate("local"), function(req, res) {
+  console.log(req.user.dataValues.admin);
+  var adminUser = req.user.dataValues.admin;
+  if(adminUser) {
+    res.json("/admin/setup")
+
+  //   db.Account.findAll({where: {email: req.body.email}}).then(function(data) {
+  //     console.log("OKKKKKKKKKKK")
+  //   res.redirect('partials/adminBtn', {adminBtn: data, layout: false});
+  // })
+
+  }
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
+    else {
   res.json("/product/members");
+}
 });
 
 
@@ -87,7 +79,7 @@ router.post('/signup', function(req,res) {
         approvedBuyer: req.body.approvedBuyer,
         admin: req.body.admin
       }).then(function() {
-        res.send({redirect: '/'});
+        res.json('/pending');
       }).catch(function(err) {
         res.json(err);
       });

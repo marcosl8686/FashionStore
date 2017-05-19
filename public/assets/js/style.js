@@ -9,6 +9,7 @@ $(document).ready(function() {
             $('#logo').css({ "position": "relative" });
             $('#logo').css({ "top": "0" });
             $('#opacity').css({"opacity":".4"});
+
         } else {
             $('#hero-img').css({ "position": "relative" });
             $('#logo').css({ "position": "absolute" });
