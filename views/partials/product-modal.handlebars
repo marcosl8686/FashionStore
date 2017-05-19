@@ -1,19 +1,27 @@
+
 <div class="modal-dialog">
     <div class="modal-content">
-      {{#each itemList}}
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">{{color}}</h4>
         </div>
         <div class="modal-body">
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-
-                      <img src="{{img}}" alt="..." class="modalImg"> 
-            
-                </div>
+          <section class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+            {{#each itemList}}
+              {{#if selected}}
+              <img src="{{img}}" alt="..." class="modalImg">
+              {{/if}}
+              {{/each}}
+            </div> 
+            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="container">
+              {{#each itemList}}
+                <button type="button" class="btn modalBtn" style="background-color: {{color}}" data="{{img}}"></button>
+                {{/each}}
             </div>
+            </div>
+          </section>
         </div>
-        {{/each}}
     </div>
 </div>
+
