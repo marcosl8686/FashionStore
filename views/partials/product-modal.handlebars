@@ -1,11 +1,8 @@
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-        {{#each itemList}}
-        {{#if selected}}
-        <h4>{{itemNum}}</h4>
-        {{/if}}
-        {{/each}}
+            {{#each itemList}} {{#if selected}}
+            <h4>{{itemNum}}</h4> {{/if}} {{/each}}
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -17,11 +14,9 @@
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="container">
                         <div>
-                          {{#each itemList}}
-                           {{#if selected}}
-                           <p>{{category}}</p>
-                           {{/if}}
-                            {{/each}}
+                            {{#each itemList}} {{#if selected}}
+                            <p>{{category}}</p>
+                            {{/if}} {{/each}}
                         </div>
                         {{#each itemList}}
                         <button type="button" class="btn modalBtn" style="background-color: {{colorCode}}" data="{{img}}"></button>
@@ -33,9 +28,9 @@
     </div>
 </div>
 <script type="text/javascript">
-  $('.modalBtn').click(function(){
-  console.log("modalBTN WORKING")
-  var imgLink = $(this).attr("data");
-  $(".modalImg").attr("src", imgLink);
+$('.modalBtn').click(function() {
+    console.log("modalBTN WORKING")
+    var imgLink = $(this).attr("data");
+    $(".modalImg").attr("src", imgLink);
 });
 </script>
