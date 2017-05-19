@@ -8,6 +8,8 @@ var passport 			= require("./config/passport");
 var PORT 				= process.env.PORT || 8090;
 var db 					= require("./models");
 var app 				= express();
+var nodemailer			= require("nodemailer");
+var xoauth2				= require("xoauth2");
 var authCheck = require('./config/middleware/attachAuthenticationStatus');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
