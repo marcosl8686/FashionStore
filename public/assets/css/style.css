@@ -69,6 +69,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 }
 .create-btn {
+	position: relative;
+	z-index: 5;
 	border: 2px solid lightcoral;
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
@@ -110,13 +112,13 @@ h1, h2, h3, h4, h5, h6 {
 #about-wrapper {
 	width: 80%;
 	display: block;
-	margin: 150px auto 50px auto;
+	margin: 120px auto 80px auto;
 	padding: 40px 80px 80px 80px;
 	border: 3px solid black;
 }
 #about-heading {
 	text-align: center;
-	margin-top: -118px;
+	margin-top: -124px;
 	position: relative;
 	width: 70%;
 	left: 15%;
@@ -134,23 +136,87 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bolder;
 }
 
-
-
-
-
+/* -----------------------sub-hero-----------------------*/
+#sub-hero{
+	background: green;
+	/*opacity: 0.5;*/
+    /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(left top, red, purple);*/
+    /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(bottom right, red, purple);*/
+    /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(bottom right, red, purple);*/
+    /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(to bottom right, red, purple);*/
+    /* Standard syntax */
+    /*font-family: 'PT Sans', sans-serif;*/
+    color: white;
+    position: relative;
+	z-index: 1;
+	height: 80%;
+}
+#sub-hero-img {
+	width: 100%;
+	background-image: url("../images/hero-2.jpg");	
+}
+#opacity {
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	width: 100%;
+	background-color: black;
+	opacity: 1;
+	transition: opacity 4s;
+	-webkit-transition: opacity 4s;
+}
+#seasonal {
+	position: relative;
+	float: right;
+	top: -60vh;
+	width: 60%;
+	height: 50vh;
+	z-index: 3;
+	border: 3px solid white;
+}
+#new-season {
+	/*font-family: 'Playfair Display', serif;*/
+	font-size: 60px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+#new-arrivals {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 60px;
+}
 
 
 /* -----------------------misc-----------------------*/
 
-.subSection2 {
+/*.subSection2 {
 	height: 40%;
 	background-color:white;
-}
-.sectTwo {
+}*/
+/*.sectTwo {
 	position: relative;
 	z-index: 1;
 	height: 80%;
-	/*background-image: url("../images/hero-2.jpg");*/
+}*/
+
+#contact {
+	background: lightcoral;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-linear-gradient(top left, lightcoral, #830808);
+    background: -o-linear-gradient(top left, lightcoral, #830808);
+    background: linear-gradient(to bottom right, lightcoral, #830808);
+    /* Standard syntax */
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    position: relative;
+	z-index: 1;
+	height: 80%;
 }
 .slideShow {
 	width: 100%;
