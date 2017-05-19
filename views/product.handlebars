@@ -36,7 +36,7 @@
             {{#each products}} {{#if this.selected}}
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                 <div class="thumbnail">
-                    <a href="#" data-toggle="modal" id="{{this.itemNum}}" class="modalSelected">
+                    <a href="#" id="{{this.itemNum}}" class="modalSelected">
                         <img src="{{this.img}}" alt="...">
                     </a>
                     <div class="thumbnail-product">
@@ -49,7 +49,7 @@
         </div>
     </section>
 </div>
-<div class="modal fade" id="product-modal" role="dialog">
+<div class="modal" id="product-modal" role="dialog">
     
 </div>
 

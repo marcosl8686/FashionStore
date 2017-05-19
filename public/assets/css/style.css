@@ -177,8 +177,6 @@ h1, h2, h3, h4, h5, h6 {
 .productHeader {
 	text-align: center;
 }
-/*.modal {
-	position: relative;
-	z-index: 99
+.modalBtn {
+	 border: 1px solid #a4a9b2;
 }
-*/

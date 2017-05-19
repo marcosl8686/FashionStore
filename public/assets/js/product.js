@@ -6,9 +6,4 @@ $('.modalSelected').click(function(){
 	})
 });
 
-$('.modalBtn').click(function(){
-	console.log("modalBTN WORKING")
-	var imgLink = $(this).attr("data");
-	$(".modalImg").attr("src", imgLink);
-});
 
