@@ -1,8 +1,41 @@
+{{> nav }}
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Item Number</th>
+            <th>Color</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub-Total</th>
 
-{{#each checkoutItem}}
+        </tr>
+    </thead>
+    <tbody>
+	{{#each itemTest}}
+        <tr>
+            <td>{{this.itemId}}</td>
+            <td>{{this.itemColor}}</td>
+            <td>{{this.itemName}}</td>
+            <td>{{this.itemPrice}}</td>
+            <td>{{this.itemQuantity}}</td>
+            <td>{{this.itemSubTotal}}</td>
+        </tr>
+     {{/each}}
+     	<tr>
+     		<td></td>
+     		<td></td>
+     		<td></td>
+     		<td></td>
+     		<td>Total: </td>
+     		<td id="total"></td>
+		</tr>
+    </tbody>
+</table>
+{{!-- {{#each itemTest}}
 <div id="hehe">
-	
-	<h1>NO!!!</h1>
+    <h1>{{this.itemId}}</h1>
+    <h1>{{this.itemNum}}</h1>
 </div>
-
 {{/each}}
+<h1>JUAN</h1> --}}

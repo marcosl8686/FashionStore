@@ -30,6 +30,8 @@
             itemColor: color,
             itemPrice: price,
             itemQuantity: quantity
+            itemSubTotal: parseFloat(price) * parseInt(quantity);
+
         };
 
 
@@ -59,6 +61,7 @@
             itemColor: color,
             itemPrice: price,
             itemQuantity: quantity
+            itemSubTotal: parseFloat(price) * parseInt(quantity);
         };
 
         deleteObject(myObj);

@@ -40,5 +40,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script src="/assets/js/product.js"></script>
+    <script type="text/javascript">
+
+    $(".shoppingbasket").on("click", function(){
+    console.log("SHOOPPPPINNGG")
+    var obj = displayCart();
+    var newObj = {
+        obj
+    }
+    console.log(obj)
+    $.post("/checkout/items", newObj).done(function(data){
+        console.log(data);
+    })
+})
+    </script>
 </body>
+
 </html>
+

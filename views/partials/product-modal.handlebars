@@ -39,6 +39,7 @@
                             <p id="color">{{ color }}</p>
                             <input id="qty-1">
                             <button class="add">Add to cart</button>
+                            <button class="erase">clear</button>
                             <p id="confirm-add"></p>
 
                     </div>
@@ -91,7 +92,8 @@ $(".add").on("click", function (event) {
             itemName: style,
             itemColor: color,
             itemPrice: price,
-            itemQuantity: quantity
+            itemQuantity: quantity,
+            itemSubTotal: parseFloat(price) * parseInt(quantity)
         };
 
 
@@ -120,7 +122,8 @@ $(".add").on("click", function (event) {
             itemName: style,
             itemColor: color,
             itemPrice: price,
-            itemQuantity: quantity
+            itemQuantity: quantity,
+            itemSubTotal: parseFloat(price) * parseInt(quantity)
         };
 
         deleteObject(myObj);
@@ -211,12 +214,6 @@ function displayCart(){
     return array;
 }
 
-$(".add").on("click", function(){
-    console.log("SHOOPPPPINNGG")
-    $.post("/checkout/items", displayCart()).done(function(data){
-        console.log(data);
-    })
-})
 
 
 </script>
