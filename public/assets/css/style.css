@@ -192,13 +192,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 #new-season {
 	/*font-family: 'Playfair Display', serif;*/
+	/*font-style: italic;*/
+
 	font-size: 60px;
-	font-style: italic;
+	font-weight: bolder;
 	text-transform: uppercase;
 }
 #new-arrivals {
-	font-family: 'PT Sans', sans-serif;
-	font-size: 60px;
+	margin-top: 50px;
+	/*font-family: 'PT Sans', sans-serif;*/
+	font-size: 30px;
+	/*font-style: italic;*/
+
 }
 
 /* -----------------------login-----------------------*/
