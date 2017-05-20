@@ -1,5 +1,4 @@
 var path = require("path");
-    console.log("routes.js");
 
 module.exports = function(app){
 	var accounts_controller = require("./controllers/accounts-controller.js");
@@ -24,4 +23,3 @@ module.exports = function(app){
   });
 
 }
-    console.log("routes.js");
