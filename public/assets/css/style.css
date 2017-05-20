@@ -24,6 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: center;
 }
 
+.jolie-btns {
+	position: relative;
+	z-index: 5;
+	color: black;
+	border: 2px solid black;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	margin-left: 30px;
+}
+
 /* -----------------------nav-----------------------*/
 .jolie-navbar {	
     border-radius: 0px;
@@ -69,14 +80,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 }
 .create-btn {
-	position: relative;
-	z-index: 5;
-	border: 2px solid lightcoral;
-	font-family: 'PT Sans', sans-serif;
-	text-transform: uppercase;
 	color: lightcoral;
-	padding: 10px 15px;
-	margin-left: 30px;
+	border: 2px solid lightcoral;
 }
 
 /* -----------------------hero sec-----------------------*/
