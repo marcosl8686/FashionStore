@@ -48,6 +48,7 @@
     "path": "^0.12.7",
     "pdf-invoice": "^1.0.2",
     "sequelize": "^3.30.4",
+    "site-shot": "^1.0.0",
     "uniqid": "^4.1.1",
     "xoauth2": "^1.2.0"
   }
