@@ -34,7 +34,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 15px;
 	background-color: transparent;
     border-radius: 0;
+}
 
+.jolie-textarea {
+	color: #999;
+    background-color: #F9F9F9;
+    border-radius: 0;
+    border: 1px solid #999;
 }
 
 /* -----------------------nav-----------------------*/
@@ -262,9 +268,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #send-email {
-	color: lightcoral;
-	border: 5px solid white;
-	background-color: white;
+	color: white;
+	border: 2px solid white;
+	/*background-color: white;*/
 }
 #color {
 	width: 100px;
