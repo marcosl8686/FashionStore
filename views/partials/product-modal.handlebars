@@ -185,5 +185,12 @@ function displayCart(){
     return array;
 }
 
+$(".add").on("click", function(){
+    console.log("SHOOPPPPINNGG")
+    $.post("/checkout/items", displayCart()).done(function(data){
+        console.log(data);
+    })
+})
+
 
 </script>

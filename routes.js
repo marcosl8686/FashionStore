@@ -7,6 +7,8 @@ module.exports = function(app){
 	var admin_controller = require("./controllers/admin-controller.js");
 	var prod_controller = require("./controllers/product-controller.js");
 	var mailer_controller = require("./controllers/mailer-controller.js");
+	var checkout_controller = require("./controllers/checkout-controller.js");
+
 
 	app.use("/accounts", accounts_controller);
 	app.use("/", app_controller);
@@ -14,6 +16,7 @@ module.exports = function(app){
 	app.use("/admin", admin_controller);
 	app.use("/logout", accounts_controller);
 	app.use("/mailer", mailer_controller);
+	app.use("/checkout", checkout_controller);
 
 	app.get("/pending", function(req, res) {
 

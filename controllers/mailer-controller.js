@@ -8,8 +8,8 @@ var transporter = nodemailer.createTransport({
 	port: 25,
 	secureConnection: false,
 	auth: {
-		user: 'firebasers@gmail.com',
-		pass: '3fireBasers'
+		user: 'joliefashionrequest@gmail.com',
+		pass: '3109818554'
 	},
 	tls: {
 		rejectUnauthorized: false
@@ -23,10 +23,10 @@ router.post("/sendmail", function(req, res){
 	console.log(req.body);
 
 	var mailOptions = {
-		from: '<firebasers@gmail.com>',
-		to: req.body.email,
+		from: req.body.email,
+		to: 'joliefashionrequest@gmail.com',
 		subject: req.body.name + " has a question for you!",
-		text: req.body.message
+		text: req.body.message + " \n Name: " + req.body.name + " \n Email: " + req.body.email
 	}
 
 	transporter.sendMail(mailOptions, function(err, res){

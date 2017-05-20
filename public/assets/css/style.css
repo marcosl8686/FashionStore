@@ -246,3 +246,23 @@ h1, h2, h3, h4, h5, h6 {
 .modalBtn {
 	 border: 1px solid #a4a9b2;
 }
+
+.shoppingbasket {
+  width:40px;
+  height:40px;
+  position:relative;
+  font-family: 'Comfortaa', cursive;
+}
+.basketitems {
+  color:#fff;
+  font-size:80%;
+  background-color:#e74c3c;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-90%);
+  -moz-transform:translate(-50%,-90%);
+  transform:translate(-50%,-90%);
+  padding:0 12%;
+  border-radius:1000px;
+}

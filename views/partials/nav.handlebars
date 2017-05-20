@@ -13,8 +13,10 @@
 
                 <ul class="nav navbar-nav navbar-center">
                     <li class="links-center"><a href="/">Home</a></li>
+                    {{#unless isAuthenticated}}
                     <li class="links-center"><a href="#">About Us</a></li>
                     <li class="links-center"><a href="#">Contact</a></li>
+                     {{/unless}}
                     {{#if isAuthenticated}}
                     <li class="links-center"><a href="/product/members">Products</a></li>
                     {{/if}}
@@ -24,11 +26,9 @@
 
                 {{#if isAuthenticated}}
                     <li><a href="/logout/sign-out" class="page-scroll" data-toggle="modal">Logout</a></li>
+                    <li> <a href="/checkout/total" class="btn shoppingbasket"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a></li>
                 {{else}}
                     <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                {{/if}}
-                {{#if adminBtn}}
-                    <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
                 {{/if}}
 
                 </ul>
@@ -36,6 +36,8 @@
 
         </div><!-- /.container-fluid -->
     </nav>
+    {{#unless isAuthenticated}}
     <section class="banner">
         <p>Create an account to check out our latest LOOKBOOK!<a class="create-btn" href="/signup">Sign Up</a></p>
     </section>
+    {{/unless}}

@@ -147,5 +147,13 @@ function displayCart(){
     var array = convertToObject(localStorage.getItem("ItemCart"));
 
     return array;
+
 }
+
+// $(".shoppingbasket").on("click", function(){
+
+//     $.get("/checkout/items").then(function(res){
+//         $('#hehe').html(res);
+//     })
+// })
 
