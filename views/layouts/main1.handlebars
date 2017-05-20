@@ -24,6 +24,50 @@
         console.log(total);
 
         $("#total").text(total);
+
+        $("#placeOrder").on("click", function(){
+            console.log('place order was submit');
+            //Get information
+
+            var fulladdress = '';
+
+            var add1 = $(".address1").text();
+            var add2 = $(".address2").text();
+            var add3 = $(".address3").text();
+            var add4 = $(".address4").text();
+            var add5 = $(".address5").text();
+            var add6 = $(".address6").text();
+            fulladdress = add1 + ' ' + add2 + ' ' + add3+ ' ' + add4+ ' ' + add5+ ' ' + add6;
+            //console.log('fulladdress', fulladdress);
+
+            var items = localStorage.getItem('ItemCart');
+
+            //console.log('ItemCart', items);
+
+            var itemsObj = JSON.parse(items);
+            //console.log('Obj itemsObj', itemsObj);
+
+            var personalObject = {
+                'name': $("#first-name").text(),
+                'address' : fulladdress,
+                'email' : $(".email").text(),
+                'total' : localStorage.getItem('total')
+            };
+            //console.log('personalObject', personalObject);
+
+            //build super object
+            itemsObj[itemsObj.length] = personalObject;
+
+            console.log('req', itemsObj)
+
+            var myObj = {
+                itemsObj
+            }
+
+            $.post('/mailer/sendInvoice', myObj).done(function(data) {
+                console.log(data);
+            });
+        });
     </script>
 </body>
 
