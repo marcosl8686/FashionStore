@@ -85,7 +85,16 @@ h1, h2, h3, h4, h5, h6 {
 	color: lightcoral;
 	border: 2px solid lightcoral;
 	margin-left: 30px;
+	transition: color 0.1s;
+	transition: border 0.1s;
 }
+
+.create-btn:hover, .create-btn:active {
+	color: white;
+	border: 2px solid white;
+	text-decoration: none;
+}
+
 
 /* -----------------------hero sec-----------------------*/
 #logo {
@@ -250,6 +259,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 	z-index: 1;
 	height: 100%;
+}
+
+#send-email {
+	color: lightcoral;
+	border: 5px solid white;
+	background-color: white;
 }
 #color {
 	width: 100px;
