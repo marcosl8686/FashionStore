@@ -1,33 +1,31 @@
-
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+<nav class="navbar navbar-default jolie-navbar">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Jolie</a>
+            <a class="navbar-brand jolie-brand" href="#">JOLIE</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="setup" class="home">Home</a></li>
-                <li><a href="items" class="items">Items</a></li>
-                <li><a href="newItem" class="add-Items">Add new Item</a></li>
-                <li class="dropdown">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-center">
+                <li><a href="setup" class="links-center home">Home</a></li>
+                <li><a href="items" class="links-center items">Items</a></li>
+                <li><a href="newItem" class="links-center add-Items">Add new Item</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Clients<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu links-right">
                         <li><a href="activeClients" class="active-clients">Active Clients</a></li>
                         <li><a href="pendingClients" class="pending-clients">Pending Clients</a></li>
                     </ul>
                 </li>
             </ul>
-
-        </div><!--/.nav-collapse -->
-    </div>
+        </div>
+    </div><!-- /.container-fluid -->
 </nav>
 <!--End of Navbar-->
 
@@ -37,12 +35,10 @@
     <br>
     <br>
     <br>
-
-
     <div class="jumbotron adminActive" id="admin-active-client">
         <div class="panel panel-success">
             <!-- Default panel contents -->
-            <div class="panel-heading">ACTIVE CLIENTS</div>
+            <div class="panel-heading">BUTTS</div>
             <!-- Table -->
             <table class="table">
                 <thead>
@@ -73,7 +69,4 @@
             </table>
         </div>
     </div>
-
-
-
 </div> <!-- /container -->
