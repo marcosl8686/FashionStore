@@ -4,7 +4,8 @@
 
         <div class="modal-header">
             {{#each itemList}} {{#if selected}}
-            <h4>{{itemNum}}</h4> {{/if}} {{/each}}
+                <h2 id="style-1">{{itemName}}</h2>
+            {{/if}} {{/each}}
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
@@ -12,37 +13,62 @@
             <section class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     {{#each itemList}} {{#if selected}}
-                    <img src="{{img}}" alt="..." class="modalImg"> {{/if}} {{/each}}
+                    <img src="{{img}}" alt="..." class="modalImg"> 
+                    {{/if}} {{/each}}
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="container">
                         <div>
                             {{#each itemList}} {{#if selected}}
-                            <p>{{category}}</p>
-                            {{/if}} {{/each}}
-                        </div>
+                                <h4>{{category}}</h4>
+                                <h4></h4>>Product # <span id="itemId">{{itemNum}}</span></h4>
+                                <h4>$<span id="price">{{price}}</span> / per unit</h4>
+                                <p id="pack-price">PACK PRICE</p>
+                                <p>Each pack includes 6pcs:
+                                    <ul>
+                                        <li>3 size SMALL</li>
+                                        <li>2 size MEDIUM</li>
+                                        <li>1 size LARGE</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        {{/if}} {{/each}}
                         {{#each itemList}}
-                        <button type="button" class="btn modalBtn" style="background-color: {{colorCode}}" data="{{img}}"></button>
+                            <button type="button" class="btn modalBtn" style="background-color: {{colorCode}}" data-img="{{img}}" data-color={{color}}></button>
                         {{/each}}
+                            <p id="color">{{ color }}</p>
+                            <input id="qty-1">
+                            <button class="add">Add to cart</button>
+                            <p id="confirm-add"></p>
+
                     </div>
                 </div>
             </section>
-            <button class="add">Add to cart</button>
         </div>
 
     </div>
 
 </div>
 <script type="text/javascript">
+
+
 $('.modalBtn').click(function() {
-    console.log("modalBTN WORKING")
-    var imgLink = $(this).attr("data");
+    console.log("modalBTN WORKING");
+    var imgLink = $(this).attr("data-img");
+    var color = $(this).attr("data-color");
+    $('#color').text(color);
     $(".modalImg").attr("src", imgLink);
 });
+
+$('.modalBtn').hover(function(){
+    var color = $(this).attr("data-color");
+    $('#color').text(color);
+});
+
 $(".add").on("click", function (event) {
         // prevent page from refreshing when form tries to submit itself
         event.preventDefault();
-        console.log('hey');
+        $('#confirm-add').text("You selection has been added to your cart!");
         // Capture user inputs and store them into variables
 
         var id = $("#itemId").text();
@@ -52,17 +78,17 @@ $(".add").on("click", function (event) {
         var quantity = $("#qty-1").val();
 
         // Console log each of the user inputs to confirm we are receiving them
-        console.log(style);
-        console.log(color);
-        console.log(price);
-        console.log(quantity);
+        console.log("NAME",style);
+        console.log("COLOR",color);
+        console.log("PRICE",price);
+        console.log("QUANTITY",quantity);
 
 
 
         // Output all of the new information into the relevant sections
         var myObj = {
             itemId: id,
-            itemNum: style,
+            itemName: style,
             itemColor: color,
             itemPrice: price,
             itemQuantity: quantity
@@ -91,7 +117,7 @@ $(".add").on("click", function (event) {
 
         var myObj = {
             itemId: id,
-            itemNum: style,
+            itemName: style,
             itemColor: color,
             itemPrice: price,
             itemQuantity: quantity
