@@ -34,7 +34,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 15px;
 	background-color: transparent;
     border-radius: 0;
+}
 
+.jolie-textarea {
+	color: #999;
+    background-color: #F9F9F9;
+    border-radius: 0;
+    border: 1px solid #999;
 }
 
 /* -----------------------nav-----------------------*/
@@ -85,7 +91,16 @@ h1, h2, h3, h4, h5, h6 {
 	color: lightcoral;
 	border: 2px solid lightcoral;
 	margin-left: 30px;
+	transition: color 0.1s;
+	transition: border 0.1s;
 }
+
+.create-btn:hover, .create-btn:active {
+	color: white;
+	border: 2px solid white;
+	text-decoration: none;
+}
+
 
 /* -----------------------hero sec-----------------------*/
 #logo {
@@ -162,27 +177,33 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	background-color: black;
 	opacity: 1;
-	transition: opacity 4s;
-	-webkit-transition: opacity 4s;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
 }
 #seasonal {
 	position: relative;
 	float: right;
-	top: -60vh;
-	width: 60%;
+	top: -65vh;
+	margin-right: 7%;
+	width: 50%;
 	height: 50vh;
 	z-index: 3;
 	border: 3px solid white;
 }
 #new-season {
 	/*font-family: 'Playfair Display', serif;*/
+	/*font-style: italic;*/
+
 	font-size: 60px;
-	font-style: italic;
+	font-weight: bolder;
 	text-transform: uppercase;
 }
 #new-arrivals {
-	font-family: 'PT Sans', sans-serif;
-	font-size: 60px;
+	margin-top: 50px;
+	/*font-family: 'PT Sans', sans-serif;*/
+	font-size: 30px;
+	/*font-style: italic;*/
+
 }
 
 /* -----------------------login-----------------------*/
@@ -235,20 +256,31 @@ h1, h2, h3, h4, h5, h6 {
 }*/
 
 #contact {
-	background: lightcoral;
+	background: black;
     /* For browsers that do not support gradients */
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-linear-gradient(top left, lightcoral, #830808);
+    /*background: -webkit-linear-gradient(top left, lightcoral, #830808);
     background: -o-linear-gradient(top left, lightcoral, #830808);
-    background: linear-gradient(to bottom right, lightcoral, #830808);
+    background: linear-gradient(to bottom right, lightcoral, #830808);*/
     /* Standard syntax */
     font-family: 'PT Sans', sans-serif;
     color: white;
     position: relative;
 	z-index: 1;
 	height: 100%;
+}
+
+/*#name-field, #email-field, #message-field {
+	margin: 5px 0;
+}*/
+
+#send-email {
+	color: white;
+	border: 2px solid white;
+	padding: 10px 30px;
+	/*background-color: white;*/
 }
 #color {
 	width: 100px;

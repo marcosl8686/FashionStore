@@ -8,7 +8,7 @@ $(document).ready(function() {
             $('#hero-img').css({ "width": "100%" });
             $('#logo').css({ "position": "relative" });
             $('#logo').css({ "top": "0" });
-            $('#opacity').css({"opacity":".4"});
+            $('#opacity').css({"opacity":"0.3"});
 
         } else {
             $('#hero-img').css({ "position": "relative" });

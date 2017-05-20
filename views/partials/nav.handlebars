@@ -14,8 +14,8 @@
             <ul class="nav navbar-nav navbar-center">
                 <li class="links-center"><a href="/">Home</a></li>
                 {{#unless isAuthenticated}}
-                <li class="links-center"><a href="#">About Us</a></li>
-                <li class="links-center"><a href="#">Contact</a></li>
+                <li class="links-center"><a href="#about">About Us</a></li>
+                <li class="links-center"><a href="#contact">Contact</a></li>
                 {{/unless}}
                 {{#if isAuthenticated}}
                 <li class="links-center"><a href="/product/members">Products</a></li>
