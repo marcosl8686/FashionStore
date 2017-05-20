@@ -3,28 +3,17 @@ var express = require('express');
 var router  = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 var test;
+var test2;
 
 router.get("/total", isAuthenticated, function(req, res){
-	res.render("checkout", {itemTest: test, layout: "main1"});
+	res.render("checkout", {itemTest: test, itemTest2: test2, layout: "main1"});
 });
 
 
 router.post('/items', isAuthenticated,function(req,res) {
-	console.log('this is req.body',req.body.obj)
+	console.log("this is res ", res.req.user);
 	test = req.body.obj
-	// var test2 = Object.keys(test)[0];
-
-	// console.log("this is test2", test2);
-	// console.log('type of test2',typeof test2);
-	// test2 = JSON.stringigy(test2);
-	// test3 = JSON.parse(test2);
-	// console.log('test3',test3);
-	// console.log('type of test3', typeof test3);
-
-	// console.log(test + "  ITEMNUM")
-	// console.log(test + "OKKKKKKKkkkkkk")
-	// console.log("WOOOORKINGGGGGGG")
-	// 	res.redirect('/total');
+	test2 = res.req.user
 });
 
 

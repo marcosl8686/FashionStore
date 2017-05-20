@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 	border: 5px solid black;
 }
-.modal-dialog {
+.loginModal {
 	width: 400px;
 }
 
@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     position: relative;
 	z-index: 1;
-	height: 80%;
+	height: 100%;
 }
 #color {
 	width: 100px;
@@ -301,4 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   transform:translate(-50%,-90%);
   padding:0 12%;
   border-radius:1000px;
+}
+.wow {
+	bottom:300px;
 }
