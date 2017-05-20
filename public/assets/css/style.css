@@ -177,8 +177,8 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	background-color: black;
 	opacity: 1;
-	transition: opacity 4s;
-	-webkit-transition: opacity 4s;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
 }
 #seasonal {
 	position: relative;
@@ -266,6 +266,10 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1;
 	height: 100%;
 }
+
+/*#name-field, #email-field, #message-field {
+	margin: 5px 0;
+}*/
 
 #send-email {
 	color: white;
