@@ -1,7 +1,7 @@
 /**
  * Created by juancarlosnavarrete on 5/19/17.
  */
-$( document ).ready(function() {
+
 
     $(".add").on("click", function (event) {
         // prevent page from refreshing when form tries to submit itself
@@ -65,7 +65,7 @@ $( document ).ready(function() {
         displayCart();
     });
 
-});
+
 
 function addObject(myObj){
     var arr = [];
@@ -144,12 +144,8 @@ function displayCart(){
 
     //iterate through an array of objects
 
-    var obj = convertToObject(localStorage.getItem("ItemCart"));
+    var array = convertToObject(localStorage.getItem("ItemCart"));
 
-    for(var i = 0; i< obj.length; i++){
-
-        console.log(obj[i]);
-
-    }
+    return array;
 }
 
