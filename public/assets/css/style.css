@@ -218,6 +218,10 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1;
 	height: 80%;
 }
+#color {
+	width: 100px;
+	height: 50px;
+}
 .slideShow {
 	width: 100%;
 	height: 320px;
