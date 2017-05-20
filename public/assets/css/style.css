@@ -32,7 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
 	padding: 10px 15px;
-	margin-left: 30px;
+	background-color: transparent;
+    border-radius: 0;
+
 }
 
 /* -----------------------nav-----------------------*/
@@ -82,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 .create-btn {
 	color: lightcoral;
 	border: 2px solid lightcoral;
+	margin-left: 30px;
 }
 
 /* -----------------------hero sec-----------------------*/
@@ -143,18 +146,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -----------------------sub-hero-----------------------*/
 #sub-hero{
-	background: green;
-	/*opacity: 0.5;*/
-    /* For browsers that do not support gradients */
-    /*background: -webkit-linear-gradient(left top, red, purple);*/
-    /* For Safari 5.1 to 6.0 */
-    /*background: -o-linear-gradient(bottom right, red, purple);*/
-    /* For Opera 11.1 to 12.0 */
-    /*background: -moz-linear-gradient(bottom right, red, purple);*/
-    /* For Firefox 3.6 to 15 */
-    /*background: linear-gradient(to bottom right, red, purple);*/
-    /* Standard syntax */
-    /*font-family: 'PT Sans', sans-serif;*/
     color: white;
     position: relative;
 	z-index: 1;
@@ -192,6 +183,42 @@ h1, h2, h3, h4, h5, h6 {
 #new-arrivals {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 60px;
+}
+
+/* -----------------------login-----------------------*/
+#login-btn {
+	background-color: black;
+	color: white;
+	border: 5px solid black;
+}
+.modal-dialog {
+	width: 400px;
+}
+
+.jolie-modal {
+    border-radius: 0;
+	border: none;
+	padding: 30px;
+}
+.modal-header .close {
+    margin-top: -30px;
+}
+
+.jolie-modal img {
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.login {
+	margin: 16px 0;
+}
+
+.jolie-input {
+	color: #999;
+    background-color: #F9F9F9;
+    border-radius: 0;
+    border: 1px solid #999;
+    height: 44px;
 }
 
 
