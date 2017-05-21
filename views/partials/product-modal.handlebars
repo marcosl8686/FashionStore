@@ -70,6 +70,7 @@ $('.modalBtn').hover(function(){
 $(".add").on("click", function (event) {
         // prevent page from refreshing when form tries to submit itself
         event.preventDefault();
+        console.log('add button');
         $('#confirm-add').text("You selection has been added to your cart!");
         // Capture user inputs and store them into variables
 
@@ -99,7 +100,7 @@ $(".add").on("click", function (event) {
 
 
         addObject(myObj);
-        displayCart();
+
 
     });
 
@@ -134,6 +135,7 @@ $(".add").on("click", function (event) {
 
 
 function addObject(myObj){
+    console.log('log object');
     var arr = [];
     //read all info and store in this function
     var str = localStorage.getItem("ItemCart");
