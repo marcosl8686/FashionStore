@@ -2,7 +2,7 @@
 Project 2: Data
 
 ## Live Link 
- - TBD
+ - https://jolie-wholesale.herokuapp.com/
 
 ## Description on how to use the app
 This wholesale clothing website has been built for a live client, Jolie.  The purpose is three-fold: 1) new customers can register to become an authorized customer, 2) authorized customers can view the brand's items and create sales orders, and 3) the admin can authorize new customers, add/delete items, and view sales orders.
