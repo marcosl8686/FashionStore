@@ -1,5 +1,5 @@
- {{> nav }}
- {{> adminBtn }}
+{{> nav }}
+{{> adminBtn }}
 <div class="container productContent">
     <section class="container-fluid">
         <div class="contaier-fuild">
@@ -35,23 +35,23 @@
     <section class="container-fluid">
         <div class="row">
             {{#each products}} {{#if this.selected}}
-            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a href="#" id="{{this.itemNum}}" class="modalSelected">
-                        <img src="{{this.img}}" alt="...">
-                    </a>
-                    <div class="thumbnail-product">
-                        <h5 href="#">{{this.itemNum}}</h5>
-                        <a href="#" class="prod-names">{{this.itemName}}</a>
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="thumbnail">
+                        <a href="#" id="{{this.itemNum}}" class="modalSelected">
+                            <img src="{{this.img}}" alt="...">
+                        </a>
+                        <div class="thumbnail-product">
+                            <h5 href="#">{{this.itemNum}}</h5>
+                            <a href="#" class="prod-names">{{this.itemName}}</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             {{/if}} {{/each}}
         </div>
     </section>
 </div>
 <div class="modal" id="product-modal" role="dialog">
-    
+
 </div>
 
 

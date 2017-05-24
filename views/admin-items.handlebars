@@ -26,7 +26,7 @@
                 <!--{{#each products}}-->
 
                 <tr>
-                    <form action="burger/eat/{{id}}" method="POST">
+                    <form action="/admin/item/delete/{{id}}" method="POST">
                         <th scope="row" class="green">{{this.itemNum}}</th>
                         <th class="green"> {{this.itemName}}</th>
                         <th class="green">{{this.price}}</th>
@@ -37,7 +37,7 @@
                     </form>
                 </tr>
 
-                <!--{{/each}}-->
+                        <!--{{/each}}-->
                 </tbody>
             </table>
         </div>

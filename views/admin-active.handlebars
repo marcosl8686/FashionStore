@@ -22,9 +22,9 @@
                 </thead>
                 <tbody>
                 <!--{{#each account}}-->
-                <!--{{#if approvedBuyer}}-->
+                        <!--{{#if approvedBuyer}}-->
                 <tr>
-                    <form action="burger/eat/{{id}}" method="POST">
+                    <form action="/admin/active/delete/{{id}}" method="POST">
                         <th scope="row" class="green">{{this.id}}</th>
                         <th class="green">{{this.firstName}} {{this.lastName}}</th>
                         <th class="green">{{this.companyName}}</th>
@@ -34,8 +34,8 @@
                         </th>
                     </form>
                 </tr>
-                <!--{{/if}}-->
-                <!--{{/each}}-->
+                        <!--{{/if}}-->
+                        <!--{{/each}}-->
                 </tbody>
             </table>
         </div>

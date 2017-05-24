@@ -23,19 +23,19 @@
                 </thead>
                 <tbody>
                 {{#each account}}
-                {{#unless approvedBuyer}}
-                <tr>
-                    <form action="burger/eat/{{id}}" method="POST">
-                        <th scope="row" class="green">{{this.id}}</th>
-                        <th class="green">{{this.firstName}} {{this.lastName}}</th>
-                        <th class="green">{{this.companyName}}</th>
-                        <th class="green">{{this.address}}</th>
-                        <th>
-                            <button id="{{this.id}}" type="submit" class="btn btn-primary">ACTIVATE</button>
-                        </th>
-                    </form>
-                </tr>
-                {{/unless}}
+                    {{#unless approvedBuyer}}
+                        <tr>
+                            <form action="/admin/activate/{{id}}" method="POST">
+                                <th scope="row" class="green">{{this.id}}</th>
+                                <th class="green">{{this.firstName}} {{this.lastName}}</th>
+                                <th class="green">{{this.companyName}}</th>
+                                <th class="green">{{this.address}}</th>
+                                <th>
+                                    <button id="{{this.id}}" type="submit" class="btn btn-primary">ACTIVATE</button>
+                                </th>
+                            </form>
+                        </tr>
+                    {{/unless}}
                 {{/each}}
                 </tbody>
             </table>
