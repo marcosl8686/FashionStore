@@ -24,6 +24,25 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: center;
 }
 
+.jolie-btns {
+	position: relative;
+	z-index: 5;
+	color: black;
+	border: 2px solid black;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	background-color: transparent;
+    border-radius: 0;
+}
+
+.jolie-textarea {
+	color: #999;
+    background-color: #F9F9F9;
+    border-radius: 0;
+    border: 1px solid #999;
+}
+
 /* -----------------------nav-----------------------*/
 .jolie-navbar {	
     border-radius: 0px;
@@ -69,13 +88,19 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 }
 .create-btn {
-	border: 2px solid lightcoral;
-	font-family: 'PT Sans', sans-serif;
-	text-transform: uppercase;
 	color: lightcoral;
-	padding: 10px 15px;
+	border: 2px solid lightcoral;
 	margin-left: 30px;
+	transition: color 0.1s;
+	transition: border 0.1s;
 }
+
+.create-btn:hover, .create-btn:active {
+	color: white;
+	border: 2px solid white;
+	text-decoration: none;
+}
+
 
 /* -----------------------hero sec-----------------------*/
 #logo {
@@ -110,13 +135,13 @@ h1, h2, h3, h4, h5, h6 {
 #about-wrapper {
 	width: 80%;
 	display: block;
-	margin: 150px auto 50px auto;
+	margin: 120px auto 80px auto;
 	padding: 40px 80px 80px 80px;
 	border: 3px solid black;
 }
 #about-heading {
 	text-align: center;
-	margin-top: -118px;
+	margin-top: -124px;
 	position: relative;
 	width: 70%;
 	left: 15%;
@@ -134,23 +159,132 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bolder;
 }
 
+/* -----------------------sub-hero-----------------------*/
+#sub-hero{
+    color: white;
+    position: relative;
+	z-index: 1;
+	height: 80%;
+}
+#sub-hero-img {
+	width: 100%;
+	background-image: url("../images/hero-2.jpg");	
+}
+#opacity {
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	width: 100%;
+	background-color: black;
+	opacity: 1;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+}
+#seasonal {
+	position: relative;
+	float: right;
+	top: -65vh;
+	margin-right: 7%;
+	width: 50%;
+	height: 50vh;
+	z-index: 3;
+	border: 3px solid white;
+}
+#new-season {
+	/*font-family: 'Playfair Display', serif;*/
+	/*font-style: italic;*/
 
+	font-size: 60px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+#new-arrivals {
+	margin-top: 50px;
+	/*font-family: 'PT Sans', sans-serif;*/
+	font-size: 30px;
+	/*font-style: italic;*/
 
+}
 
+/* -----------------------login-----------------------*/
+#login-btn {
+	background-color: black;
+	color: white;
+	border: 5px solid black;
+}
+.loginModal {
+	width: 400px;
+}
 
+.jolie-modal {
+    border-radius: 0;
+	border: none;
+	padding: 30px;
+}
+.modal-header .close {
+    margin-top: -30px;
+}
+
+.jolie-modal img {
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.login {
+	margin: 16px 0;
+}
+
+.jolie-input {
+	color: #999;
+    background-color: #F9F9F9;
+    border-radius: 0;
+    border: 1px solid #999;
+    height: 44px;
+}
 
 
 /* -----------------------misc-----------------------*/
 
-.subSection2 {
+/*.subSection2 {
 	height: 40%;
 	background-color:white;
-}
-.sectTwo {
+}*/
+/*.sectTwo {
 	position: relative;
 	z-index: 1;
 	height: 80%;
-	/*background-image: url("../images/hero-2.jpg");*/
+}*/
+
+#contact {
+	background: black;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    /*background: -webkit-linear-gradient(top left, lightcoral, #830808);
+    background: -o-linear-gradient(top left, lightcoral, #830808);
+    background: linear-gradient(to bottom right, lightcoral, #830808);*/
+    /* Standard syntax */
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    position: relative;
+	z-index: 1;
+	height: 100%;
+}
+
+/*#name-field, #email-field, #message-field {
+	margin: 5px 0;
+}*/
+
+#send-email {
+	color: white;
+	border: 2px solid white;
+	padding: 10px 30px;
+	/*background-color: white;*/
+}
+#color {
+	width: 100px;
+	height: 50px;
 }
 .slideShow {
 	width: 100%;
@@ -179,4 +313,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 .modalBtn {
 	 border: 1px solid #a4a9b2;
+}
+
+.shoppingbasket {
+  width:40px;
+  height:40px;
+  position:relative;
+  font-family: 'Comfortaa', cursive;
+}
+.basketitems {
+  color:#fff;
+  font-size:80%;
+  background-color:#e74c3c;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-90%);
+  -moz-transform:translate(-50%,-90%);
+  transform:translate(-50%,-90%);
+  padding:0 12%;
+  border-radius:1000px;
+}
+.wow {
+	bottom:300px;
+}
+
+.prod-names, .prod-names:hover, .prod-names:active {
+	color: black;
+	text-decoration: none;
 }
